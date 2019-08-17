@@ -1,0 +1,23 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: cdd
+    password: 123456
+
+---
+server:
+  port: 8761
+  
+---
+eureka:
+  datacenter: cloud  #数据中心
+  environment: product  #环境  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://localhost:8761/eureka/       defaultZone: http://cdd:123456@localhost:8761/eureka
+      
+  
+    
+

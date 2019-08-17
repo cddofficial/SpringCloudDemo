@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon
+    
+server:
+  port: 8010
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://cdd:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    
+    
+#有eureka的情况下，禁用ribbon功能
+ribbon:  
+  eureka:
+   enabled: false
+   
+#不想用eureka的情况下，  指定访问服务节点
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:7900,localhost:7901
+   
