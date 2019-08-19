@@ -18,8 +18,7 @@ public class MovieController {
 	@GetMapping("/movie/{id}")
 	@HystrixCommand(fallbackMethod = "findByIdFallback")
 	public User findById(@PathVariable Long id) {
-		return restTemplate.
-				getForObject("http://microservice-provider-user/simple/" + id, User.class);
+		return this.restTemplate.getForObject("http://localhost:7900/simple/" + id, User.class);
 	}
 	
 	/**
