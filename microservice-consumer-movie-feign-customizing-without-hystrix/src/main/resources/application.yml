@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: microservice-consumer-movie
+    
+server:
+  port: 7901
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://cdd:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    
+    
+logging:
+  level:
+    com.cdd.cloud.feign.UserFeignClient: DEBUG
+    
+#把超时时间设长点，默认是1秒
+hystrix.command.serverMethod.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+#禁用超时限制
+#hystrix.command.serverMethod.execution.enable: false
+
+#禁用feign的hystrix
+#feign.hystrix.enable: false
