@@ -3,4 +3,4 @@ server:  port: 8040
 eureka:  client:
     service-url:
 #      defaultZone: http://localhost:8761/eureka/       defaultZone: http://cdd:123456@localhost:8761/eureka
-  instance:    prefer-ip-address: true   zuul:  routes:    abc:      path: /user-url/**      service-id: microservice-provider-userribbon:  eureka:    enabled: false  microservice-provider-user:   #这里serviceId  ribbon:    listOfServers: http://192.168.0.103:7900,http://192.168.0.103:7901                             
+  instance:    prefer-ip-address: true   #zuul:#  sensitive-headers:     #为了安全考虑，默认拦拦截请求里面的"Cookie", "Set-Cookie", "Authorization"等信息         
