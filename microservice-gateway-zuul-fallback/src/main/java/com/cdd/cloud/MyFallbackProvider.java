@@ -13,7 +13,12 @@ import org.springframework.stereotype.Component;
 
 import com.netflix.hystrix.exception.HystrixTimeoutException;
 
-
+/**	
+ * 这次搭建微服务时，用到的springCloud版本太低，没有FallbackProvider或ZuulFallbackPorovider接口，下面这个没有实战了。
+ * 以后搭建微服务时尽量用高版本的springCloud
+ * @author Administrator
+ *
+ */
 //@Component
 //class MyFallbackProvider implements FallbackProvider {
 class MyFallbackProvider {
