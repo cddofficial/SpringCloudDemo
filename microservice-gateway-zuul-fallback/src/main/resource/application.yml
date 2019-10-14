@@ -1,0 +1,6 @@
+spring:  application:    name: microservice-gateway-zuul 
+server:  port: 8040  
+eureka:  client:
+    service-url:
+#      defaultZone: http://localhost:8761/eureka/       defaultZone: http://cdd:123456@localhost:8761/eureka
+  instance:    prefer-ip-address: true   #zuul:#  sensitive-headers:     #为了安全考虑，默认拦拦截请求里面的"Cookie", "Set-Cookie", "Authorization"等信息         
