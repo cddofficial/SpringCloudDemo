@@ -7,5 +7,6 @@ spring:
       server:
         git:
           uri: https://github.com/cddofficial/config-repo-demo
-          username: xxxx
-          password: xxxx
+  
+    
+
