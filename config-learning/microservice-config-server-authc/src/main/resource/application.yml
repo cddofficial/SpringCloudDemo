@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cddofficial/config-repo-demo
+          username: xxxx
+          password: xxxx
+          
+security:  basic:    enabled: true
+  user:    name: cdd
+    password: 654321
