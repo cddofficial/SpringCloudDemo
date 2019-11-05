@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cddofficial/config-repo-demo
+          username: xxxx
+          password: xxxx  application:    name: microservice-config-server-eureka
+          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cdd:123456@localhost:8761/eureka
+  instance:    prefer-ip-address: true      
