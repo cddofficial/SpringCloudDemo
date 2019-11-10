@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
   
 spring:
   application:
@@ -8,7 +8,7 @@ spring:
     config:
       uri: http://localhost:8080
       profile: dev
-      label: master   #当config server的后端存储是git时，默认是master
+      label: master   #当config server的后端存储是git时，默认是master#    bus:#      enabled: true   #打开跟踪,查看信息访问  “主机 + 端口号"，例如：localhost:8081/trace
   rabbitmq:    host: localhost
     port: 5672
     username: guest
